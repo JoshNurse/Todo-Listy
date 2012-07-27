@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :id => "focusMe" %>
   </div>
   <div class="actions">
     <%= submit_tag "Create", :disable_with => "Creating..." %> or <%= link_to 'cancel', :back %>

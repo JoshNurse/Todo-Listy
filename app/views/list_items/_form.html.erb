@@ -1,7 +1,7 @@
 <%= form_for([@list, @list.list_items.build]) do |f| %>
   <div class="field">
     <%= f.label :item %><br />
-    <%= f.text_field :item %>
+    <%= f.text_field :item, :id => "focusMe" %>
   </div>
   <div class="actions">
     <%= submit_tag "Add Item", :disable_with => "Adding..." %> or <%= link_to 'edit list', edit_list_path(@list) %>

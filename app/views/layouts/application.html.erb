@@ -3,7 +3,9 @@
 	<head>
 	  <title>Todo</title>
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	  <%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
 	</head>
 	<body>
 		<div id="logo"><%= link_to(image_tag(("logo.png"), :width => "308", :height => "88"), root_path) %></div>
