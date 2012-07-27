@@ -1,0 +1,6 @@
+<% @items.each do |item| %>
+  <p>
+    <b>Item:</b>
+    <%= item.item %> <%= link_to 'Destroy', [item.list, item], :confirm => 'Are you sure?', :method => :delete %>
+  </p>
+<% end %>

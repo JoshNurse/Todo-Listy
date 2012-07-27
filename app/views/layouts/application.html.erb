@@ -4,19 +4,23 @@
 	  <title>Todo</title>
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
-	  <%= csrf_meta_tags %>
 	</head>
 	<body>
-		<p id="notice"><%= notice %></p>
-		<div id="nav">
-			<% if current_user %>
-				<%= link_to "Edit Profile", edit_user_path(current_user.id)%>
-				<%= link_to "Logout", :logout%>
-			<% else %>
-				<%= link_to "Register", new_user_path%> | 
-				<%= link_to "Login", :login %>
-			<% end %>
-		</div>
-		<%= yield %>
+		<div id="logo"><%= link_to(image_tag("logo.png"), root_path) %></div>
+		<div class="wrapper">
+			<div id="nav">
+				<% if current_user %>
+					<%= link_to_unless_current "My Lists", lists_path %> | 
+					<%= link_to_unless_current "Edit Profile", edit_user_path(current_user.id)%> |
+					<%= link_to_unless_current "Logout", :logout%>
+				<% else %>
+					<%= link_to_unless_current "Register", new_user_path%> | 
+					<%= link_to_unless_current "Login", :login %>
+				<% end %>
+			</div>
+			<div id="notice"><%= notice %></div>
+			<%= yield %>
+		</div><!--wrapper-->
+		<%= render "shared/analytics" %>
 	</body>
 </html>

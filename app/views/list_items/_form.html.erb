@@ -1,0 +1,9 @@
+<%= form_for([@list, @list.list_items.build]) do |f| %>
+  <div class="field">
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

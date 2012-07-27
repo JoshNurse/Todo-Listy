@@ -2,7 +2,11 @@ Todo::Application.routes.draw do
   
   root :to => "home#index"
   
-  resources :users, :user_sessions
+  resources :users
+  resources :lists do
+    resources :list_items
+  end
+  resources :user_sessions
   match 'login' =>  'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 
