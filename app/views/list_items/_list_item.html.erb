@@ -1,5 +1,5 @@
 <ul>
 <% @items.each do |item| %>
-  <li><%= item.item %> <%= link_to 'Delete', [item.list, item], :confirm => 'Are you sure?', :method => :delete %></li>
+  <li><%= item.item %> <%= link_to 'Delete', [item.list, item], :confirm => 'Are you sure?', :method => :delete, :class => "deleteLink" %></li>
 <% end %>
 </ul>
