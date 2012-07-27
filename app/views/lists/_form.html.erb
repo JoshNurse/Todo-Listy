@@ -16,6 +16,6 @@
     <%= f.text_field :name %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag "Create", :disable_with => "Creating..." %> or <%= link_to 'cancel', :back %>
   </div>
 <% end %>

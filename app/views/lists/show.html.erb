@@ -1,13 +1,11 @@
-<p>
-  <b>Name:</b>
-  <%= @list.name %>
-</p>
+<h1><%= @list.name %></h1>
 
-<h2>Items</h2>
+<%- if @list.list_items.empty? -%>
+	<div class="alert">
+		You haven't added any todo items to this list yet.
+	</div>
+<%- end -%>
+
 <%= render "list_items/list_item" %>
 
-<h2>Add an item:</h2>
 <%= render "list_items/form" %>
-
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>

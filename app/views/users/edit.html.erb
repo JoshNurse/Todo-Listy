@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @user %> |
+<%= link_to 'Delete My Account', [@user], :confirm => 'Are you really, really sure you wish to delete your account? All of your lists will be completely gone forever.', :method => :delete, :class => "deleteLink" %> |
 <%= link_to 'Cancel', :back %>

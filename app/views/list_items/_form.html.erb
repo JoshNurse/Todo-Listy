@@ -4,6 +4,6 @@
     <%= f.text_field :item %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag "Add Item", :disable_with => "Adding..." %> or <%= link_to 'edit list', edit_list_path(@list) %>
   </div>
 <% end %>

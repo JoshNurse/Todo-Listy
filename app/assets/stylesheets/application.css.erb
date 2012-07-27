@@ -3,7 +3,8 @@ body {
 	background: url(<%= asset_path 'bg.png' %>);
 	font-family: "Lucida Grande", Helvetica, Arial, Sans-serif;
 }
-#nav { text-align: center; }
+.center { text-align: center; }
+#nav { text-align: right; }
 .wrapper {
 	width: 960px;
 	margin: 0 auto;
@@ -17,4 +18,58 @@ body {
 #logo { text-align: center; margin: 50px auto; }
 #notice {
   color: green;
+}
+a.greenBtn, .actions input {
+  -moz-box-shadow:inset 0px 1px 0px 0px #cbf59b;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #cbf59b;
+    box-shadow:inset 0px 1px 0px 0px #cbf59b;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #9fcc6c), color-stop(1, #70aa29) );
+    background:-moz-linear-gradient( center top, #9fcc6c 5%, #70aa29 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9fcc6c', endColorstr='#70aa29');
+    background-color:#9fcc6c;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #9fcc6c;
+    display:inline-block;
+    color:#ffffff;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #7d7d7d;
+		margin: 10px 0;
+}
+
+a.greenBtn:hover, .actions input:hover {
+	  cursor: pointer;
+		color: #fff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #70aa29), color-stop(1, #9fcc6c) );
+    background:-moz-linear-gradient( center top, #70aa29 5%, #9fcc6c 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#70aa29', endColorstr='#9fcc6c');
+    background-color:#70aa29;
+}
+a.greenBtn:active, .actions input:active {
+    position:relative;
+		color: #fff;
+    top:1px;
+}
+tr.light { background: #eee; }
+tr.dark  { background: #ccc; }
+a { color: #000; }
+a:hover { color: #999; }
+a.deleteLink:hover { background: red; color: #fff; text-decoration: none; }
+.alert {
+	background: #FFF3C5;
+	border: 1px solid #FFCC00;
+	padding: 10px;
+	margin: 15px 0 5px;
+	font-size: 14px;
+}
+.notice {
+	background: #a3ffa9;
+	border: 1px solid #69c76f;
+	padding: 10px;
+	margin: 15px 0 5px;
+	font-size: 14px;
 }

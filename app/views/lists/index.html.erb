@@ -1,16 +1,21 @@
 <h1>My Lists</h1>
 
-<table>
+<%= link_to 'New List', new_list_path, :class => "greenBtn" %>
+
+<br /><br />
+
+<%- if @lists.empty? -%>
+	<div class="alert">
+		You haven't created any todo lists yet.
+	</div>
+<%- end -%>
+
+<table cellpadding="20" width="100%">
 <% @lists.each do |list| %>
-  <tr>
-    <td><%= list.name %></td>
-    <td><%= link_to 'Show', list %></td>
-    <td><%= link_to 'Edit', edit_list_path(list) %></td>
-    <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr class="<%= cycle("light","dark") %>">
+    <td><%= link_to list.name, list %></td>
+    <td class="center"><%= link_to 'Edit', edit_list_path(list) %></td>
+    <td class="center"><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure? This list will be gone forever.' }, :class => "deleteLink" %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New List', new_list_path %>

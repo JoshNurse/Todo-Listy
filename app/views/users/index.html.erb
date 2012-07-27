@@ -1,1 +1,3 @@
-<%= @users %> users on our system
+<ul>
+	<li><%= pluralize(number_with_delimiter(@users), 'user') %> on our system</li>
+</ul>

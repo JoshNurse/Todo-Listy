@@ -6,19 +6,21 @@
 	  <%= javascript_include_tag "application" %>
 	</head>
 	<body>
-		<div id="logo"><%= link_to(image_tag("logo.png"), root_path) %></div>
+		<div id="logo"><%= link_to(image_tag(("logo.png"), :width => "308", :height => "88"), root_path) %></div>
 		<div class="wrapper">
 			<div id="nav">
 				<% if current_user %>
 					<%= link_to_unless_current "My Lists", lists_path %> | 
-					<%= link_to_unless_current "Edit Profile", edit_user_path(current_user.id)%> |
+					<%= link_to_unless_current "My Profile", user_path(current_user.id) %> |
 					<%= link_to_unless_current "Logout", :logout%>
 				<% else %>
-					<%= link_to_unless_current "Register", new_user_path%> | 
+					<%= link_to_unless_current "Register", new_user_path %> |
 					<%= link_to_unless_current "Login", :login %>
 				<% end %>
 			</div>
-			<div id="notice"><%= notice %></div>
+			<% unless notice.blank? %>
+			<div class="notice"><%= notice %></div>
+			<% end %>
 			<%= yield %>
 		</div><!--wrapper-->
 		<%= render "shared/analytics" %>
