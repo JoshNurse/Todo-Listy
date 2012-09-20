@@ -20,7 +20,7 @@ class UserSessionsController < ApplicationController
       if @user_session.save
         format.html {
           redirect_to lists_path
-          flash[:notice] = "Welcome back!"
+          flash[:notice] = "Welcome back, #{(@user_session.user.username).capitalize}!"
         }
         format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
       else

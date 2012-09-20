@@ -385,4 +385,7 @@
 
 $(function(){
 	if($("#focusMe").val() == "") { $("#focusMe").focus(); }
+	$('.notice').delay(500).slideDown(function(){
+		$(this).delay(2500).slideUp();
+	});
 });
