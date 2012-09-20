@@ -11,22 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, :id => "focusMe" %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation %>
-    </div>
+	<table id="userSession">
+		<tr>
+			<td><%= f.label :username %></td>
+			<td><%= f.text_field :username, :id => "focusMe" %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :email %></td>
+			<td><%= f.text_field :email %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :password %></td>
+			<td><%= f.password_field :password %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :password_confirmation, "Confirm Password" %></td>
+			<td><%= f.password_field :password_confirmation %></td>
+		</tr>
+	</table>
+
   <div class="actions">
     <%= submit_tag "Submit", :disable_with => "Saving..." %>
   </div>

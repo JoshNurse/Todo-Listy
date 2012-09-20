@@ -1,12 +1,11 @@
-<h1>My Profile</h1>
+<div id="accountBlurb">
+	<strong>+</strong> My username is <strong><%= @user.username %></strong>. <br />
+	<strong>+</strong> My email is <strong><%= @user.email %></strong>.<br />
+	<strong>+</strong>  So far, I have created <strong><%= pluralize(@user.lists.count, "list") %></strong>.<br />
+	<strong>+</strong>  I signed up here on <strong><%= @user.created_at %></strong>
+	and have logged in <strong><%= pluralize(@user.login_count, "time") %></strong>.
+</div>
 
-<ul>
-	<li>Your username is <%= @user.username %></li>
-	<li>Your email is <%= @user.email %></li>
-	<li>You signed up on <%= @user.created_at %></li>
-	<li>You've logged in <%= pluralize(@user.login_count, "time") %></li>
-	<li>You currently have <%= pluralize(@user.lists.count, "list") %></li>
-</ul>
-
-<%= link_to 'Edit Profile', edit_user_path(@user) %> or
-<%= link_to 'Go Back', :back %>
+<center>
+<%= link_to 'Edit Account', edit_user_path(@user) %>
+</center>

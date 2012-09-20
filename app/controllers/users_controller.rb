@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to lists_path, notice: 'Account created! Thanks for signing up :)' }
+        format.html { redirect_to lists_path, notice: 'Thanks for signing up :)' }
       else
         format.html { render action: "new" }
       end

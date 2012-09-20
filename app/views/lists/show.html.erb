@@ -1,11 +1,13 @@
-<h1><%= @list.name %></h1>
+<center>
+	<h1><%= @list.name %></h1>
 
-<%- if @list.list_items.empty? -%>
-	<div class="alert">
-		You haven't added any todo items to this list yet.
-	</div>
-<%- end -%>
+	<%- if @list.list_items.empty? -%>
+		<div class="alert">
+			You haven't added any todo items to this list yet.
+		</div>
+	<%- end -%>
 
-<%= render "list_items/list_item" %>
+	<%= render "list_items/list_item" %>
 
-<%= render "list_items/form" %>
+	<%= render "list_items/form" %>
+</center>

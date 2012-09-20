@@ -1,23 +1,60 @@
 body, html { margin: 0; padding: 0; }
 body {
-	background: url(<%= asset_path 'bg.png' %>);
-	font-family: "Lucida Grande", Helvetica, Arial, Sans-serif;
+	background: url(<%= asset_path 'bg.png' %>) 50% 50% repeat fixed;
+	font-family: "Lucida Grande", Verdana, Helvetica, Arial, Sans-serif;
+	width: 100%;
 }
 .center { text-align: center; }
-#nav { text-align: right; }
+.right { float: right; }
+.left { float: left; }
+.clear { clear: both; }
+
+#header {
+	height: 100px;
+	width: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.95;
+	border-bottom: 1px solid #ddd;
+}
+#header h1 {
+	margin: 0;
+	padding: 10px 0 0 10px;
+	letter-spacing: -1px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-weight: 100;
+	font-size: 65px;
+	float: left;
+}
+#header h1 a { text-decoration: none; }
+#nav { float: right; }
+#nav ul { list-style: none; margin: 0; padding: 0; }
+#nav ul li, #nav ul li a {
+	margin: 0;
+	padding: 0;
+	float: left;
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-weight: 200;
+	width: 150px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+}
+#nav ul li { background: #eee; }
+#nav ul li a { background: #fff; }
+#nav ul li a:hover { text-decoration: none; }
+
 .wrapper {
-	width: 960px;
-	margin: 0 auto 50px;
+	width: 80%;
+	margin: 140px auto 50px;
 	background: #fff;
 	-webkit-border-radius: 20px;
 	border-radius: 20px;
 	padding: 20px;
 	-webkit-box-shadow:  0px 0px 10px 0px #999999;
 	box-shadow:  0px 0px 10px 0px #999999;
-}
-#logo { text-align: center; margin: 50px auto; }
-#notice {
-  color: green;
 }
 a.greenBtn, .actions input {
   -moz-box-shadow:inset 0px 1px 0px 0px #cbf59b;
@@ -74,7 +111,7 @@ a.deleteLink:hover { background: red; color: #fff; text-decoration: none; }
 	font-size: 14px;
 	display: none;
 }
-.notice:hover { cursor: pointer; }
+.notice, .alert { text-align: center; }
 input[type="text"], input[type="password"] {
 	padding: 5px;
 	font-size: 14px;
@@ -87,3 +124,12 @@ input[type="text"], input[type="password"] {
 	margin-bottom: 50px;
 }
 #footer a { color: #999; }
+table#userSession td:first-child { text-align: right; padding-right: 5px; }
+#listCount { padding-top: 15px; font-size: 12px; color: #666; }
+ul#listItems li { text-align: left; }
+#accountBlurb {
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-weight: 100;
+	font-size: 40px;
+	margin-bottom: 40px;
+}

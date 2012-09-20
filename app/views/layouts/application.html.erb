@@ -4,24 +4,29 @@
 		<title>Simple Todo Lists</title>
 		<meta name="description" content="Todo Listy is an extremely simple web application that allows you to store todo lists and access them from anywhere, anytime.">
 		<meta name="keywords" content="online, todo, list, todo lists, todo list, save, quick, simple, robert himler">
-		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= stylesheet_link_tag "scaffold", :media => "all" %>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<%= javascript_include_tag "application" %>
 		<%= csrf_meta_tags %>
 	</head>
 	<body>
-		<div id="logo"><%= link_to(image_tag(("logo.png"), :width => "308", :height => "88"), root_path) %></div>
-		<div class="wrapper">
+		<div id="header">
+			<h1><%= link_to "Todo Listy", root_path %></h1>
 			<div id="nav">
+				<ul>
 			<%- if current_user -%>
-				<%= link_to_unless_current "My Lists", lists_path %> | 
-				<%= link_to_unless_current "My Profile", user_path(current_user.id) %> |
-				<%= link_to_unless_current "Logout", :logout%>
+					<li><%= link_to_unless_current "My Lists", lists_path %></li>
+					<li><%= link_to_unless_current "My Account", user_path(current_user.id) %></li>
+					<li><%= link_to_unless_current "Logout", :logout%></li>
 			<%- else -%>
-				<%= link_to_unless_current "Register", new_user_path %> |
-				<%= link_to_unless_current "Login", :login %>
+					<li><%= link_to_unless_current "Register", new_user_path %></li>
+					<li><%= link_to_unless_current "Login", :login %></li>
 			<%- end -%>
+				</ul>
 			</div>
+		</div><!--header-->
+		<div class="wrapper">
 			<%- unless notice.blank? -%>
 			<div class="notice"><%= notice %></div>
 			<%- end -%>

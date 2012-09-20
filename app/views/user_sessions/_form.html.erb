@@ -11,14 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username, :id => "focusMe" %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
+	<table id="userSession">
+		<tr>
+			<td><%= f.label :username %></td>
+			<td><%= f.text_field :username, :id => "focusMe" %></td>
+		</tr>
+		<tr>
+			<td><%= f.label :password %></td>
+			<td><%= f.password_field :password %></td>
+		</tr>
+	</table>
+	
   <div class="actions">
     <%= submit_tag "Login", :disable_with => "Logging in..." %>
   </div>

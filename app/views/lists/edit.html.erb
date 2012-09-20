@@ -1,7 +1,10 @@
-<h1>Editing "<%= @list.name %>"</h1>
+<center>
+	<h1>Editing "<%= @list.name %>"</h1>
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<br />
+	<br />
 
-<%= link_to 'Delete List', @list, method: :delete, data: { confirm: 'Are you sure? This list will be gone forever.' }, :class => "deleteLink" %>
+	<%= link_to 'Delete List', @list, method: :delete, data: { confirm: 'Are you sure? This list will be gone forever.' }, :class => "deleteLink right" %>
+	<div class="clear"></div>
+</center>
