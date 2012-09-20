@@ -388,4 +388,8 @@ $(function(){
 	$('.notice').delay(500).slideDown(function(){
 		$(this).delay(2500).slideUp();
 	});
+	$('#howMany').click(function(){
+		$("#accountBlurb").slideDown();
+		return false;
+	})
 });

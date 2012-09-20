@@ -7,9 +7,10 @@ Todo::Application.routes.draw do
     resources :list_items
   end
   resources :user_sessions
-  match 'login' =>  'user_sessions#new', :as => :login
-  match 'logout' => 'user_sessions#destroy', :as => :logout
-
+  
+  match 'login'      =>  'user_sessions#new',    :as => :login
+  match 'logout'     => 'user_sessions#destroy', :as => :logout
+  match 'contribute' => 'site#contribute',       :as => :contribute
 
 
   # See how all your routes lay out with "rake routes"

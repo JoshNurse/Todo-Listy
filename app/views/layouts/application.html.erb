@@ -4,6 +4,7 @@
 		<title>Simple Todo Lists</title>
 		<meta name="description" content="Todo Listy is an extremely simple web application that allows you to store todo lists and access them from anywhere, anytime.">
 		<meta name="keywords" content="online, todo, list, todo lists, todo list, save, quick, simple, robert himler">
+		<meta content='width=device-width; initial-scale=0.5; maximum-scale=0.5; user-scalable=no;' name='viewport' />
 		<%= stylesheet_link_tag "application", :media => "all" %>
 		<%= stylesheet_link_tag "scaffold", :media => "all" %>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -33,7 +34,7 @@
 			<%= yield %>
 		</div><!--wrapper-->
 		<div id="footer">
-			&copy; 2012 &middot; <a href="http://www.roberthimler.com">Robert Himler</a> &middot; All rights reserved.
+			&copy; 2012 &middot; All rights reserved. &middot; <%= link_to "Contribute", contribute_path %>
 		</div>
 		<%= render "shared/analytics" %>
 	</body>

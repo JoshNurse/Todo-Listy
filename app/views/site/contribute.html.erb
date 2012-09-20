@@ -1,0 +1,46 @@
+<h1 class="center">Contribute to Todo Listy</h1>
+
+<p>
+	Initially I (<%= link_to "@RobertHimler", "http://twitter.com/roberthimler" %>) created this project to build a
+	quick app with Rails 3 + Heroku to play with their deployment. Since then it has gained some traction and I'd
+	like to let others work on the project with me. If you're comfortable with the technologies below then feel free
+	to contribute!
+</p>
+
+<p><strong>What needs done:</strong></p>
+<ul>
+	<li>Mark list items as complete</li>
+	<li>If all list items are complete, mark the list as complete</li>
+	<li>Responsive site design</li>
+	<li>Apple home screen icon</li>
+	<li>Re-order list items by drag and drop</li>
+	<li>Re-order lists by drag and drop</li>
+	<li>Sort lists (my order, date, completion status, etc)</li>
+	<li>Better usability (lots of ajax, keyboard shortcuts, etc)</li>
+	<li>Other ideas you might have! :)</li>
+</ul>
+
+<p><strong>Technologies used:</strong></p>
+<ul>
+	<li>Rails 3
+		<ul>
+			<li>Authlogic</li>
+		</ul>
+	</li>
+	<li>Heroku</li>
+	<li>MySQL</li>
+	<li>jQuery</li>
+	<li>HTML5</li>
+	<li>CSS3</li>
+</ul>
+
+<p><strong>View source code / send pull requests:</strong></p>
+<ul>
+	<li><%=link_to "Todo Listy on GitHub", "http://github.com/roberthimler/todolisty" %></li>
+</ul>
+
+<p class="center" id="howMany"><%= link_to "How many people are going to enjoy your hard work?", "#" %></p>
+
+<div id="accountBlurb" style="margin: 0; text-align: center; display: none;">
+	At this moment, <%= number_with_delimiter(@users) %> people use Todo Listy!
+</div>
