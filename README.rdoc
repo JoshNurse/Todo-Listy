@@ -1,12 +1,39 @@
 == Welcome to Todo Listy
 
-This is a fun, simple application I initially built in about 4 hours with Rails 3.
+View it live @ [todolisty.com](http://todolisty.com/).
 
+This is a fun, simple todo list application I initially built in about 4 hours on an airplane. So excuse any messy bits that may have slipped by ;)
 
-== Remote Repos
+== Getting Setup
 
-- To deploy to the production server at todolisty.com
-       git push heroku master
+Getting setup and started is fairly simple.
 
-- To push the code to this private repo on GitHub
-       git push -u origin master
+I recommend using RVM to manage different versions of Ruby and to create a gemset for this project.
+
+- Rails 3.2.6
+- Ruby 1.9.3
+- MySQL
+
+Install dependencies and setup your development database.
+
+     bundle install
+     rake db:create
+     rake db:migrate
+
+Finally, fire up the server!
+
+     rails s
+
+== What Needs Done?
+
+- Mark list items as complete
+- If all list items are complete, mark the list as complete
+- Responsive site design
+- Apple home screen icon
+- Re-order list items by drag and drop
+- Re-order lists by drag and drop
+- Sort lists (my order, date, completion status, etc)
+- Better usability (lots of ajax, keyboard shortcuts, etc)
+- Other ideas you might have! :)
+
+I look forward to your pull requests!
