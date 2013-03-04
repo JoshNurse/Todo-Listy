@@ -5,6 +5,9 @@
 		<meta name="description" content="Todo Listy is an extremely simple web application that allows you to store todo lists and access them from anywhere, anytime.">
 		<meta name="keywords" content="online, todo, list, todo lists, todo list, save, quick, simple, robert himler">
 		<meta content='width=device-width; initial-scale=0.5; maximum-scale=0.5; user-scalable=no;' name='viewport' />
+		
+		<link rel="apple-touch-icon-precomposed" href="/assets/images/apple-icon.png" /><!-- Added the Apple Touch Icon -->
+
 		<%= stylesheet_link_tag "application", :media => "all" %>
 		<%= stylesheet_link_tag "scaffold", :media => "all" %>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -34,7 +37,7 @@
 			<%= yield %>
 		</div><!--wrapper-->
 		<div id="footer">
-			&copy; 2012 &middot; All rights reserved. &middot; <%= link_to "Contribute", contribute_path %>
+			&copy; 2013 &middot; All rights reserved. &middot; <%= link_to "Contribute", contribute_path %>
 		</div>
 		<%= render "shared/analytics" %>
 	</body>
