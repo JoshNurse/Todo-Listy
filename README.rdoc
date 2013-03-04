@@ -1,8 +1,8 @@
 == Welcome to Todo Listy
 
-View it live @ [todolisty.com](http://todolisty.com/).
+View it live @ (http://todolisty.com/)
 
-This is a fun, simple todo list application I initially built in about 4 hours on an airplane. So excuse any messy bits that may have slipped by ;)
+This is a fun, simple todo list application I initially built in about 4. So excuse any messy bits that may have slipped by ;)
 
 == Getting Setup
 
